@@ -2,11 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card as FlowbiteCard } from "flowbite-react";
 
+
 const Card = (props) => {
   return (
     <div>
       <FlowbiteCard
-        className="max-w-sm"
+        className="max-w-sm "
         imgAlt={props.productName}
         imgSrc={props.image}
       >
@@ -15,6 +16,8 @@ const Card = (props) => {
             {props.productName}
           </h5>
         </a>
+
+{/* rating starts */}
         <div className="mb-5 mt-2.5 flex items-center">
           {[...Array(5)].map((_, i) => (
             <svg
@@ -31,6 +34,8 @@ const Card = (props) => {
             5.0
           </span>
         </div>
+{/* rating ends */}
+
         <div className="flex items-center justify-between">
           <span className="text-3xl font-bold text-gray-900 dark:text-white">{props.price}</span>
           <Link
@@ -40,6 +45,7 @@ const Card = (props) => {
             View Details
           </Link>
         </div>
+        
       </FlowbiteCard>
     </div>
   );
