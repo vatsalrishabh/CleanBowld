@@ -8,6 +8,7 @@ import CardHolder from './Components/CardHolder';
 import Products from './Components/Products';
 import ContactUs from './Components/ContactUs';
 import AboutUs from './Components/AboutUs';
+import NotFound from './Components/NotFound';
 
 function App() {
   return (
@@ -26,7 +27,8 @@ function App() {
         />
           <Route path="about" element={<AboutUs/>} />
         <Route path="contactus" element={<ContactUs/>} />
-        <Route path="/products:productId" element={<Products />} />
+        <Route path="/product/:productId" element={<Products />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </BrowserRouter>

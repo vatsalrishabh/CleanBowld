@@ -15,17 +15,17 @@ const products = [
 ];
 
 const Products = () => {
-  const { productId } = useParams();
-  const product = products.find(p => p.id === productId);
+  const params = useParams();
+  const product = params.productId;
 
-  if (!product) {
-    return <div>Product not found</div>;
-  }
+ console.log(343)
 
   return (
     <div className='product-detail'>
-      <h1>{product.name}</h1>
-      <p>{product.description}</p>
+            <p>Product ID: {product}</p>
+
+      {/* <h1>{product.name}</h1>
+      <p>{product.description}</p> */}
     </div>
   );
 };
